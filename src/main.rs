@@ -1,7 +1,8 @@
 use std::collections::HashMap;
+use std::u64;
 // use std::io;
 
-fn do_step(x: u32) -> u32 {
+fn do_step(x: u64) -> u64 {
     if x % 2 == 0 {
         return x / 2;
     }
@@ -9,13 +10,13 @@ fn do_step(x: u32) -> u32 {
 }
 
 fn main() {
-    let bottom: u32 = 10000;
-    let top: u32 = 10000000;
-    // let bottom: u32 = 4;
-    // let top: u32 = 10;
+    let bottom: u64 = 10000;
+    let top: u64 = 100000000;
+    // let bottom: u64 = 4;
+    // let top: u64 = 10;
 
-    let mut max: u32 = 0;
-    let mut max_steps: u32 = 0;
+    let mut max: u64 = 0;
+    let mut max_steps: u64 = 0;
 
     let mut cache = HashMap::new();
     cache.insert(1, 0);
@@ -42,6 +43,7 @@ fn main() {
 
     }
 
+    println!("{} {} {}", bottom, top, u64::MAX);
     println!("{} with {} steps", max, max_steps);
     println!("cache_size: {}", cache.len());
 

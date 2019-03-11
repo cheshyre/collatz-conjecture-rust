@@ -1,0 +1,7 @@
+[package]
+name = "collatz_conjecture"
+version = "0.1.0"
+authors = ["cheshyre"]
+edition = "2018"
+
+[dependencies]
