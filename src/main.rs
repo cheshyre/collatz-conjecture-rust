@@ -10,7 +10,7 @@ fn do_step(x: u32) -> u32 {
 
 fn main() {
     let bottom: u32 = 10000;
-    let top: u32 = 100000;
+    let top: u32 = 100000000;
     // let bottom: u32 = 4;
     // let top: u32 = 10;
 
